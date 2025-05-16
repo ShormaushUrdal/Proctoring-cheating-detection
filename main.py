@@ -141,6 +141,7 @@ if __name__ == "__main__":
         with open('ml_based_proctoring.json', 'r') as file:
             ml_data = json.load(file)
             ml_scores = {item['id']: item['score'] for item in ml_data['candidates']}
+            print(f"ml_scores")
     except Exception as e:
         print(f"Error loading ml_scores.json: {e}")
         ml_scores = {}
